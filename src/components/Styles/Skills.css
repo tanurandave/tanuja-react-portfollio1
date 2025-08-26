@@ -1,0 +1,115 @@
+
+.skills-sectionAb {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 50px;
+ background: linear-gradient(to right, #141e30, #24152c);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.skills-leftAb {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.glow-btnAb {
+  font-family: 'Vladimir Script';
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 15px 40px;
+  transition: 0.4s;
+  text-align: center;
+
+  /* Runtime background control */
+  background: var(--btn-bg, linear-gradient(45deg, #441d19, #FFB347, #88057d, #7FFF00, #218076, #6495ED, #DA70D6));
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+
+  box-shadow: 0 0 8px #a020f0, 0 0 16px #a020f0;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow-btnAb:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #a020f0, 0 0 40px #a020f0;
+  filter: brightness(1.2);
+}
+
+.skills-right {
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.glow-box {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #1e1e2f;
+  animation: flicker 3s infinite alternate;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glow-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #a020f0, 0 0 40px #a020f0;
+}
+
+.glow-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.glow-box ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.icon {
+  color: #ffeb3b;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ffeb3b;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  border: 2px solid #a020f0;
+  box-shadow: 0 0 12px rgba(160, 32, 240, 0.5);
+  padding: 5px 10px;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.85;
+  }
+}

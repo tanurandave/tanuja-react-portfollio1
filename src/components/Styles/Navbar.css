@@ -1,0 +1,99 @@
+.navbar {
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 60px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.logo {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #b76efb;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #b76efb;
+}
+
+.github-button {
+  padding: 8px 20px;
+  border: 2px solid #a259ff;
+  border-radius: 25px;
+  color: #a259ff;
+  background-color: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #a259ff;
+  color: #fff;
+}
+
+/* ✅ Hamburger icon hidden by default */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* ✅ Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    border-left: 2px solid #b76efb;
+    border-bottom: 2px solid #b76efb;
+    z-index: 100;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide GitHub button inside nav when menu opens */
+  .github-button {
+    display: none;
+  }
+}
