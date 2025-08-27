@@ -110,7 +110,9 @@ const About = () => {
               <div className="projects">
                 <h4>Projects:</h4>
                 <ul>
-                  <li><a href="https://example.com" target="_blank" rel="noreferrer">Weather Web App</a></li>
+                  <li><a href="https://example.com" target="_blank" rel="noreferrer">Weather Web App</a></li> 
+              <li><a href="https://github.com/tanurandave/restorant-billing-sysyem" target="_blank" rel="noreferrer">Restorant Billing System</a></li>
+                
                 </ul>
               </div>
             </div>
@@ -170,7 +172,8 @@ const About = () => {
                 <h4>Projects:</h4>
                 <ul>
                   <li><a href="#" target="_blank" rel="noreferrer">Portfolio Web App</a></li>
-                  <li><a href="https://example.com" target="_blank" rel="noreferrer">E-commerce Website</a></li>
+              <li><a href="https://technical-igtbxto6h-tanujas-projects-0f9a9030.vercel.app/" target="_blank" rel="noreferrer">Technical Website</a></li>
+              <li><a href="https://example.com" target="_blank" rel="noreferrer">E-commerce Website</a></li>
                 </ul>
               </div>
             </div>
