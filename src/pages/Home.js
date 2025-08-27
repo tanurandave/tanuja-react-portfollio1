@@ -170,12 +170,15 @@ useEffect(() => {
         <button className="glow-btnAb" onClick={() => navigate("/projects")}>
           Projects
         </button>
-     <button
+    <a
+  href="https://www.linkedin.com/in/tanuja-randave-b691292a3"
+  target="_blank"
+  rel="noopener noreferrer"
   className="glow-btnAb"
-  onClick={() => window.open("https://www.linkedin.com/in/tanuja-randave-b691292a3", "_blank")}
 >
   LinkedIn
-</button>
+</a>
+
 
         <button
           className="glow-btnAb"
