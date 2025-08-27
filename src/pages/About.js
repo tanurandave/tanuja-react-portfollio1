@@ -67,7 +67,7 @@ const About = () => {
                 <h4>Projects:</h4>
                 <ul>
                   <li><a href="https://example.com" target="_blank" rel="noreferrer">Chat Application</a></li>
-                  <li><a href="https://github.com/tanurandave/ai-diet-planner" target="_blank" rel="noreferrer">AI Diet Planner</a></li>
+                  <li><a href="https://ai-diet-planner-gamma.vercel.app/" target="_blank" rel="noreferrer">AI Diet Planner</a></li>
                 </ul>
               </div>
             </div>
@@ -81,7 +81,7 @@ const About = () => {
               <div className="projects">
                 <h4>Projects:</h4>
                 <ul>
-                  <li><a href="https://github.com/tanurandave/ai-diet-planner" target="_blank" rel="noreferrer">AI Diet Planner</a></li>
+                  <li><a href="https://ai-diet-planner-gamma.vercel.app/" target="_blank" rel="noreferrer">AI Diet Planner</a></li>
                 </ul>
               </div>
             </div>
