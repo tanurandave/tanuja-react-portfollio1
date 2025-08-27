@@ -87,7 +87,7 @@ const Projects = () => {
       frontend: "React.js",
       backend: "Node.js, OpenAI API",
       features: "AI Meal Plan Generator, Recipes, Health Condition Filter",
-      visitLink: "https://github.com/tanurandave/ai-diet-planner",
+      visitLink: "https://ai-diet-planner-gamma.vercel.app/",
       images: [
         "/images/diet1.png",
         "/images/diet2.png",
