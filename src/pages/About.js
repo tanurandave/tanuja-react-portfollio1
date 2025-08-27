@@ -185,7 +185,7 @@ const About = () => {
                 <h4>Projects:</h4>
                 <ul>
                   <li><a href="https://example.com" target="_blank" rel="noreferrer">Student Management</a></li>
-                  <li><a href="https://example.com" target="_blank" rel="noreferrer">Employee System</a></li>
+                  <li><a href="https://github.com/tanurandave/employee-management/" target="_blank" rel="noreferrer">Employee System</a></li>
                 </ul>
               </div>
             </div>
