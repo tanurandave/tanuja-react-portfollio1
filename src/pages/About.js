@@ -37,7 +37,7 @@ const About = () => {
                 <ul>
                   <li><a href="https://tanujarportfollio.netlify.app/" target="_blank" rel="noreferrer">Portfolio Website</a></li>
                   <li><a href="https://68510cecd3bd9c6de8d0ab34--bucolic-pegasus-b00315.netlify.app/" target="_blank" rel="noreferrer">Landing Page Design</a></li>
-                  <li><a href="https://example.com" target="_blank" rel="noreferrer">E-commerce Website</a></li>
+                  <li><a href="https://happy-fxjmzu2cz-tanujas-projects-0f9a9030.vercel.app/" target="_blank" rel="noreferrer">E-commerce Website</a></li>
                 </ul>
               </div>
             </div>
@@ -173,7 +173,7 @@ const About = () => {
                 <ul>
                   <li><a href="#" target="_blank" rel="noreferrer">Portfolio Web App</a></li>
               <li><a href="https://technical-igtbxto6h-tanujas-projects-0f9a9030.vercel.app/" target="_blank" rel="noreferrer">Technical Website</a></li>
-              <li><a href="https://example.com" target="_blank" rel="noreferrer">E-commerce Website</a></li>
+              <li><a href="https://happy-fxjmzu2cz-tanujas-projects-0f9a9030.vercel.app/" target="_blank" rel="noreferrer">E-commerce Website</a></li>
                 </ul>
               </div>
             </div>
