@@ -26,6 +26,7 @@ const Navbar = () => {
         <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
     
 
+      
       <a
         className={`github-button ${isMenuOpen ? 'show-btn' : ''}`}
         href="https://github.com/tanurandave"
@@ -34,7 +35,7 @@ const Navbar = () => {
       >
         Github Profile
       </a>
-        </ul>
+      </ul>
     </nav>
   );
 };
