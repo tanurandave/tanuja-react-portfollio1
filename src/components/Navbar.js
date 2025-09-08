@@ -14,8 +14,8 @@ const Navbar = () => {
       <h1 className="logo">PORTFOLIO</h1>
 
       {/* Hamburger Icon */}
-      <div className="hamburger" onClick={toggleMenu}>
-        &#9776;
+      <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        ☰
       </div>
 
       <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
@@ -24,16 +24,17 @@ const Navbar = () => {
         <li><Link to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
         <li><Link to="/certification" onClick={() => setIsMenuOpen(false)}>Certification</Link></li>
         <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
-      </ul>
+    
 
       <a
-        className="github-button"
+        className={`github-button ${isMenuOpen ? 'show-btn' : ''}`}
         href="https://github.com/tanurandave"
         target="_blank"
         rel="noopener noreferrer"
       >
         Github Profile
       </a>
+        </ul>
     </nav>
   );
 };
