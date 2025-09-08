@@ -8,6 +8,7 @@
   height: 60px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -56,44 +57,61 @@
   color: #fff;
 }
 
-/* ✅ Hamburger icon hidden by default */
+/* ✅ Hamburger */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
   color: white;
+  z-index: 1100;
 }
-
 /* ✅ Mobile view */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
     flex-direction: column;
-    background-color: #111;
     position: absolute;
     top: 60px;
     right: 0;
     width: 220px;
-    padding: 1rem;
+
+    /* Transparent glass effect */
+    background: rgba(17, 17, 17, 0.6); /* transparent black */
+    backdrop-filter: blur(10px);       /* blur effect */
+    -webkit-backdrop-filter: blur(10px);
+
+    /* hidden by default */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
     border-left: 2px solid #b76efb;
     border-bottom: 2px solid #b76efb;
-    z-index: 100;
+    border-radius: 8px;
   }
 
   .nav-links li {
-    margin: 10px 0;
+    margin: 15px 0;
+    text-align: center;
   }
 
   .nav-links.show {
-    display: flex;
+    max-height: 400px; /* enough to fit all items */
+    opacity: 1;
+    padding: 1rem;
   }
 
   .hamburger {
     display: block;
   }
 
-  /* Hide GitHub button inside nav when menu opens */
+  /* ✅ GitHub button appears after menu items */
   .github-button {
     display: none;
+  }
+
+  .github-button.show-btn {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
   }
 }
