@@ -66,7 +66,6 @@ const About = () => {
               <div className="projects">
                 <h4>Projects:</h4>
                 <ul>
-                  /* <li><a href="https://example.com" target="_blank" rel="noreferrer">Chat Application</a></li> */
                   <li><a href="https://ai-diet-planner-gamma.vercel.app/" target="_blank" rel="noreferrer">AI Diet Planner</a></li>
                 </ul>
               </div>
@@ -110,7 +109,6 @@ const About = () => {
               <div className="projects">
                 <h4>Projects:</h4>
                 <ul>
-                  /* <li><a href="https://example.com" target="_blank" rel="noreferrer">Weather Web App</a></li> */
               <li><a href="https://github.com/tanurandave/restorant-billing-sysyem" target="_blank" rel="noreferrer">Restorant Billing System</a></li>
                 
                 </ul>
@@ -159,7 +157,6 @@ const About = () => {
                 <h4>Projects:</h4>
                 <ul>
                   <li><a href="https://github.com/tanurandave/smart-health-care-system" target="_blank" rel="noreferrer">Health Care System</a></li>
-                  /* <li><a href="https://example.com" target="_blank" rel="noreferrer">College Website</a></li> */
                 </ul>
               </div>
             </div>
@@ -189,7 +186,6 @@ const About = () => {
               <div className="projects">
                 <h4>Projects:</h4>
                 <ul>
-                  /* <li><a href="https://example.com" target="_blank" rel="noreferrer">Student Management</a></li> */
                   <li><a href="https://github.com/tanurandave/employee-management/" target="_blank" rel="noreferrer">Employee System</a></li>
                 </ul>
               </div>
