@@ -33,7 +33,7 @@ const Projects = () => {
   frontend: "HTML, CSS, JavaScript",
   backend: "None (Static Website)",
   features: "Product Showcase, Responsive Design, Sliders & Animations, Hover Effects",
-  visitLink: "https://68510cecd3bd9c6de8d0ab34--bucolic-pegasus-b00315.netlify.app/",
+  visitLink: "https://happy-fxjmzu2cz-tanujas-projects-0f9a9030.vercel.app",
   images: [
     "/images/ecommerce1.png",
     "/images/ecommerce2.png",
