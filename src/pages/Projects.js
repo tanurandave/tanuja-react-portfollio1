@@ -26,6 +26,24 @@ const Projects = () => {
       ],
     },
     {
+  title: "Static E-Commerce Website",
+  short: "Responsive online store with modern design & product showcase.",
+  description:
+    "A fully static e-commerce website built using HTML, CSS, and JavaScript. It showcases products with interactive cards, hover effects, sliders, and category filters. Designed with a clean UI, responsive layout for desktop and mobile, and smooth animations for a modern shopping experience.",
+  frontend: "HTML, CSS, JavaScript",
+  backend: "None (Static Website)",
+  features: "Product Showcase, Responsive Design, Sliders & Animations, Hover Effects",
+  visitLink: "https://68510cecd3bd9c6de8d0ab34--bucolic-pegasus-b00315.netlify.app/",
+  images: [
+    "/images/ecommerce1.png",
+    "/images/ecommerce2.png",
+    "/images/ecommerce3.png",
+    "/images/ecommerce4.png",
+    "/images/ecommerce5.png",
+  ],
+},
+
+    {
       title: "Restaurant Billing System",
       short: "Java Swing desktop hotel billing & order management with MySQL.",
       description:
