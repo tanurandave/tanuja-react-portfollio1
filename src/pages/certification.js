@@ -78,21 +78,21 @@ const Certification = () => {
   };
 
   const certifications = [
-    { img: cert1, title: "Certificate 1", file: cert1 },
-    { img: cert2, title: "Certificate 2", file: cert2 },
-    { img: cert3, title: "Certificate 3", file: cert3 },
-    { img: cert4, title: "Certificate 4", file: cert4 },
-    { img: cert5, title: "Certificate 5", file: cert5 },
-    { img: cert6, title: "Certificate 6", file: cert6 },
-    { img: cert7, title: "Certificate 7", file: cert7 },
-    { img: cert8, title: "Certificate 8", file: cert8 },
-    { img: cert9, title: "Certificate 9", file: cert9 },
-    { img: cert10, title: "Certificate 10", file: cert10 },
-    { img: cert11, title: "Certificate 11", file: cert11 },
-    { img: cert12, title: "Certificate 12", file: cert12 },
-    { img: cert13, title: "Certificate 13", file: cert13 },
-    { img: cert14, title: "Certificate 14", file: cert14 },
-    { img: cert15, title: "Certificate 15", file: cert15 },
+    { img: cert1, title: "Web Developemt", file: cert1 },
+    { img: cert2, title: "Hands On React Js From Beginner to Expert", file: cert2 },
+    { img: cert3, title: "Flutter & Dart", file: cert3 },
+    { img: cert4, title: "Cyber Security Fundamentals", file: cert4 },
+    { img: cert5, title: "AWS For Beginners", file: cert5 },
+    { img: cert6, title: "Industrial Trainning MERN Stack Developer", file: cert6 },
+    { img: cert7, title: "Best Poster Award", file: cert7 },
+    { img: cert8, title: "AWS Academy Cloud Fundation", file: cert8 },
+    { img: cert9, title: "Java Programming with JDBC", file: cert9 },
+    { img: cert10, title: "Cyber Security Fundamentals", file: cert10 },
+    { img: cert11, title: "AI & ML Learning", file: cert11 },
+    { img: cert12, title: "Winner of Wiso Tech 2K23", file: cert12 },
+    { img: cert13, title: "Full Stack Development Trainning using PhP", file: cert13 },
+    { img: cert14, title: "C and C++ Workshop ", file: cert14 },
+    { img: cert15, title: "Participation on Hackathon", file: cert15 },
   ];
 
   return (

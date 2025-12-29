@@ -6,6 +6,7 @@ import profileImg from '../assets/profile_pic.jpg';
 import SVERI_Pandharpur_logo from '../assets/images/sverilogo.jpg';
 import poly_logo from '../assets/images/diploma_logo.jpg';
 import school_logo from '../assets/images/school_logo.jpg';
+import cert7 from "../assets/images/cert7.jpg";
 import Tanuja_Resume from '../assets/pdf/Tanuja_Resume.pdf';
 
 import {
@@ -19,9 +20,9 @@ import {
   FaJava,
   FaGitAlt,
   FaGithub,
-  FaLinux,
-} from "react-icons/fa";
-import { SiMysql, SiFirebase, SiMongodb, SiPostgresql, SiAndroidstudio, SiFlutter, SiDart, SiFigma } from "react-icons/si";
+  FaLinux,FaDownload ,FaLinkedin, FaCertificate
+,FaProjectDiagram} from "react-icons/fa";
+import { SiMysql, SiFirebase,SiSupabase, SiMongodb, SiPostgresql, SiAndroidstudio, SiFlutter, SiDart, SiFigma } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 
@@ -36,7 +37,7 @@ const positions = [
   "Full Stack Web Developer",
   "Backend Developer",
   "Frontend Developer",
-  "Java Programmer",
+  "ull Stack Java Programmer",
   "Cloud Computing Explorer",
   "Problem Solver",
   "Web Application Developer"
@@ -119,6 +120,7 @@ useEffect(() => {
             <span><FaCss3Alt /> CSS</span>
             <span><FaJsSquare /> JavaScript</span>
             <span><FaBootstrap /> Bootstrap</span>
+            
           </div>
         </div>
 
@@ -129,9 +131,12 @@ useEffect(() => {
             <span><FaNodeJs /> Node JS</span>
             <span><FaPython /> Python</span>
             <span><SiMysql /> MySQL</span>
+            <span><SiSupabase /> SupaBase</span>
             <span><SiFirebase /> Firebase</span>
             <span><SiMongodb /> MongoDB</span>
             <span><SiPostgresql /> PostgreSQL</span>
+            <span> Supabase</span>
+            
           </div>
         </div>
 
@@ -161,54 +166,69 @@ useEffect(() => {
         </div>
       </div>
     </section>
-      {/* SKILLS SECTION */}
-    <section className="skills-sectionAb">
-      <div className="skills-leftAb">
-        <button className="glow-btnAb" onClick={() => navigate("/certification")}>
-          Certification
-        </button>
-        <button className="glow-btnAb" onClick={() => navigate("/projects")}>
-          Projects
-        </button>
+{/* SKILLS SECTION */}
+<section className="skills-sectionAb">
+  {/* Left Action Cards */}
+  <div className="skills-leftAb">
+    <div className="action-card" onClick={() => navigate("/certification")}>
+      <FaCertificate className="action-icon" />
+      <span className="action-label">Certification</span>
+    </div>
+   
     <a
-  href="https://www.linkedin.com/in/tanuja-randave-b691292a3"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="glow-btnAb"
->
-  LinkedIn
-</a>
+      href="https://www.linkedin.com/in/tanuja-randave-b691292a3"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="action-card"
+    >
+      <FaLinkedin className="action-icon" />
+      <span className="action-label">LinkedIn</span>
+    </a>
+    <div
+      className="action-card"
+      onClick={() => {
+        const link = document.createElement("a");
+        link.href = Tanuja_Resume;
+        link.download = "Tanuja_Resume.pdf";
+        link.click();
+      }}
+    >
+      <FaDownload className="action-icon" />
+      <span className="action-label">Download CV</span>
+    </div>
+    
+  </div>
 
+  {/* Right Skill Card (Modern Glassmorphism) */}
+  <div className="skills-right">
+    <div className="glass-card">
+      <span className="badge">Java Web Development</span>
 
-        <button
-          className="glow-btnAb"
-          onClick={() => {
-            const link = document.createElement("a");
-            link.href = Tanuja_Resume;
-            link.download = "Tanuja_Resume.pdf";
-            link.click();
-          }}
+      <h2>Skills & Expertise</h2>
+      <p className="subtitle">
+        Handle dynamic web requests, database operations, and build scalable enterprise apps.
+      </p>
+
+      <ul className="skill-list">
+        <li><FaServer className="icon" /> <strong>Servlet:</strong> Handle dynamic web requests & responses.</li>
+        <li><FaDatabase className="icon" /> <strong>JDBC:</strong> Manage database operations seamlessly.</li>
+        <li><FaLeaf className="icon" /> <strong>Spring:</strong> Build scalable enterprise web apps.</li>
+        <li><FaCode className="icon" /> <strong>Full Stack:</strong> End-to-end development using Java.</li>
+      </ul>
+
+      <div className="card-actions">
+        <a
+          href="https://dev.java/learn/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="primary-btn"
         >
-          Download CV
-        </button>
+          Read More
+        </a>
       </div>
-
-
-        <div className="skills-right">
-          <div className="glow-box animate-flicker">
-            <h2>Java Web Development</h2>
-            <ul>
-              <li><FaServer className="icon" /> <strong>Servlet:</strong> Handle dynamic web requests & responses.</li>
-              <li><FaDatabase className="icon" /> <strong>JDBC:</strong> Manage database operations seamlessly.</li>
-              <li><FaLeaf className="icon" /> <strong>Spring:</strong> Build scalable enterprise web apps.</li>
-              <li><FaCode className="icon" /> <strong>Full Stack:</strong> End-to-end development using Java.</li>
-            </ul>
-            <a className="read-more" href="https://dev.java/learn/" target="_blank" rel="noopener noreferrer">
-              Read More
-            </a>
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 
       {/* EDUCATION SECTION */}
       <section className="education-section">
@@ -288,41 +308,126 @@ useEffect(() => {
       <p className="journey-subtitle">Every step taught me something new...</p>
 
       <div className="journey-container">
-        <div className="journey-card" data-aos="zoom-in" data-aos-delay="100">
-          <div className="card-inner">
-            <div className="card-front">
-              <h3>2021</h3>
-              <p>Started with Java</p>
-            </div>
-            <div className="card-back">
-              <p>I began learning core Java, mastering OOPs, loops, and basic console applications.</p>
-            </div>
-          </div>
-        </div>
+       <div className="journey-card" data-aos="zoom-in" data-aos-delay="100">
+  <div className="card-inner">
+    <div className="card-front">
+      <h3>2021</h3>
+      <p>Diploma Journey Begins 🎓</p>
+    </div>
+    <div className="card-back">
+      <p>
+        Started my diploma and entered the world of programming.
+        Learned fundamentals of <b>Core Java</b>, <b>OOPs concepts</b>,
+        and basic problem-solving using <b>C++</b>.
+      </p>
+    </div>
+  </div>
+</div>
 
-        <div className="journey-card" data-aos="zoom-in" data-aos-delay="200">
-          <div className="card-inner">
-            <div className="card-front">
-              <h3>2022</h3>
-              <p>First Web Project</p>
-            </div>
-            <div className="card-back">
-              <p>Built my first full-stack project using HTML, CSS, JavaScript, PHP, and MySQL.</p>
-            </div>
-          </div>
-        </div>
+
+       <div className="journey-card" data-aos="zoom-in" data-aos-delay="200">
+  <div className="card-inner">
+    <div className="card-front">
+      <h3>2022</h3>
+      <p>Web & Software Development 🚀</p>
+    </div>
+    <div className="card-back">
+      <p>
+        Expanded my skills into <b>Web Development</b> and
+        <b>Software Development</b>. Worked with
+        <b>HTML, CSS, JavaScript, PHP, Bootstrap</b>,
+        <b>MySQL & SQL</b>, along with
+        <b>Advanced Java</b> and <b>Android App Development</b>.
+        Also gained basics of <b>software testing</b>.
+      </p>
+    </div>
+  </div>
+</div>
+
 
         <div className="journey-card" data-aos="zoom-in" data-aos-delay="300">
           <div className="card-inner">
-            <div className="card-front">
-              <h3>2023</h3>
-              <p>National Competition 🏆</p>
-            </div>
-            <div className="card-back">
-              <p>Won 1st prize in a national-level project competition for a smart healthcare Web App.</p>
-            </div>
+           {/* FRONT SIDE */}
+<div className="card-front">
+  {/* Optional image */}
+  {/* <img src={certWisoTech} alt="Wiso-Tech 2K23 Certificate" className="achievement-img" /> */}
+
+  <h3>2023</h3>
+  <p>1st Prize – National Level 🏆</p>
+</div>
+
+           {/* BACK SIDE */}
+<div className="card-back">
+  <h4>Wiso-Tech-2K23</h4>
+
+  <p>
+    Secured <b>1st Prize</b> in the <b>National Level Project Competition</b>
+    organized by V.V.P. Polytechnic, Solapur.
+  </p>
+
+  <p className="org">
+    Vidya Vikas Pratishthan’s<br />
+    V.V.P. Polytechnic, Solapur
+  </p>
+
+  <p className="date">
+    April 2023
+  </p>
+</div>
+
           </div>
         </div>
+<div className="journey-card" data-aos="zoom-in" data-aos-delay="300">
+  <div className="card-inner">
+    
+    {/* FRONT SIDE */}
+    <div className="card-front">
+        {/* <img src={cert7} alt="Best Poster Award" className="achievement-img"/> */}
+     
+      <h3>2024</h3>
+      <p>Best Poster Award 🏆</p>
+    </div>
+
+    {/* BACK SIDE */}
+    <div className="card-back">
+      <h4>Techno-Societal 2024</h4>
+      <p>
+        Won <b>Best Poster Award</b> at the 5th International Conference on
+        Advanced Technologies for Societal Applications.
+      </p>
+      <p className="org">
+        SVERI’s College of Engineering, Pandharpur
+      </p>
+       <p className="date">
+    December 2024
+  </p>
+    </div>
+
+  </div>
+</div>
+<div className="journey-card" data-aos="zoom-in" data-aos-delay="300">
+  <div className="card-inner">
+    <div className="card-front">
+      <h3>2025</h3>
+      <p>Advanced Full-Stack & AI 🚀</p>
+    </div>
+
+    <div className="card-back">
+      <p>
+        Actively working on <b>real-world, production-level projects</b>.
+        Developing full-stack applications using
+        <b>React, Node.js, MongoDB</b> and
+        <b>Spring Boot</b> with secure authentication and REST APIs.
+        Exploring <b>AI-powered features</b>, cloud deployment,
+        system design, and building scalable applications like
+        <b>e-commerce platforms</b>, <b>helpdesk systems</b>,
+        and <b>AI-based tools</b>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
       </div>
     </section>
 
@@ -338,7 +443,7 @@ useEffect(() => {
     <div className="service-card" data-aos="zoom-in" data-aos-delay="100">
       <i className="fas fa-code service-icon"></i>
       <h3>Frontend Developer</h3>
-      <p>Responsive UI/UX with HTML, CSS, JavaScript & React.</p>
+      <p>Responsive UI/UX with HTML, CSS, JavaScript & React JS.</p>
     </div>
 
     {/* Java Backend Developer */}
@@ -352,7 +457,7 @@ useEffect(() => {
       <div className={`expanded-description ${showDesc ? 'show' : ''}`} id="backendDesc">
         <p>
           🛡️ Focused on scalable, secure, and modular backend systems.<br />
-          📡 Experience with MySQL, MongoDB, and real-time data integration.
+          📡 Experience with MySQL, MongoDB, SupaBase, and real-time data integration.
         </p>
       </div>
     </div>

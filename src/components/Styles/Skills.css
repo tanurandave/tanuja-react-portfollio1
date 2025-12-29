@@ -1,115 +1,201 @@
-
-.skills-sectionAb {
+.skills-sectionAb { 
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   padding: 60px 50px;
- background: linear-gradient(to right, #141e30, #24152c);
+  background: linear-gradient(to right, #141e30, #24152c);
   color: #fff;
   flex-wrap: wrap;
+  gap: 50px;
 }
 
+/* Left Action Cards */
 .skills-leftAb {
+  display: grid;
+  grid-template-columns: repeat(1, 120px);
+  gap: 25px 30px;
+  justify-items: center;
+}
+
+/* ============================= */
+/* ACTION CARD (BUTTON) */
+/* ============================= */
+.action-card {
+  position: relative; /* REQUIRED for glowing line */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.glow-btnAb {
-  font-family: 'Vladimir Script';
-  font-size: 40px;
-  text-decoration: none;
-  color: white;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  padding: 15px 40px;
-  transition: 0.4s;
-  text-align: center;
-
-  /* Runtime background control */
-  background: var(--btn-bg, linear-gradient(45deg, #441d19, #FFB347, #88057d, #7FFF00, #218076, #6495ED, #DA70D6));
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #0e1725, #180b20);
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
-
-  box-shadow: 0 0 8px #a020f0, 0 0 16px #a020f0;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  overflow: hidden;
 }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* 🔥 TRANSPARENT WHITE GLOW LINE */
+.action-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  filter: blur(1px);
+  opacity: 0.6;
+  pointer-events: none;
 }
 
-.glow-btnAb:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px #a020f0, 0 0 40px #a020f0;
-  filter: brightness(1.2);
+/* ✨ MOVING LIGHT EFFECT */
+.action-card::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: rotateGlow 6s linear infinite;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
+/* Hover enhancement */
+.action-card:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.25);
+}
+
+.action-card:hover::before {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.action-card:hover::after {
+  opacity: 0.8;
+}
+
+/* Icon & text */
+.action-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  z-index: 2;
+}
+
+.action-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  z-index: 2;
+}
+
+/* ============================= */
+/* RIGHT SKILL CARD */
+/* ============================= */
 .skills-right {
   max-width: 600px;
-  transition: transform 0.3s ease-in-out;
 }
 
-.glow-box {
-  padding: 40px;
+.glass-card {
+  padding: 35px;
   border-radius: 20px;
-  background-color: #1e1e2f;
-  animation: flicker 3s infinite alternate;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.glow-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #a020f0, 0 0 40px #a020f0;
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.45);
 }
 
-.glow-box h2 {
-  font-size: 2rem;
+.badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #d1d1d1;
   margin-bottom: 20px;
-  font-weight: bold;
 }
 
-.glow-box ul {
+.skill-list {
   list-style: none;
   padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.skill-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .icon {
-  color: #ffeb3b;
-  margin-right: 10px;
-  font-size: 1.3rem;
+  color: #ffd700;
+  font-size: 1.2rem;
 }
 
-.read-more {
-  display: inline-block;
-  margin-top: 20px;
-  color: #ffeb3b;
-  font-weight: bold;
+.card-actions .primary-btn {
+  padding: 12px 24px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: transform 0.3s ease;
 }
 
-.read-more:hover {
-  text-decoration: underline;
-  border: 2px solid #a020f0;
-  box-shadow: 0 0 12px rgba(160, 32, 240, 0.5);
-  padding: 5px 10px;
+.card-actions .primary-btn:hover {
+  transform: scale(1.05);
 }
 
-@keyframes flicker {
-  from {
-    opacity: 1;
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 900px) {
+  .skills-sectionAb {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    opacity: 0.85;
+
+  .skills-leftAb {
+    grid-template-columns: repeat(1, 100px);
+    gap: 15px;
   }
 }

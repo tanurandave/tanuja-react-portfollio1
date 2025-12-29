@@ -123,7 +123,7 @@ const Projects = () => {
       frontend: "React.js, Framer Motion",
       backend: "EmailJS",
       features: "Project Tabs, Animations, Responsive Layout",
-      visitLink: "https://your-portfolio.com",
+      visitLink: "https://tanuja-randave-portfollio.vercel.app/",
       images: [
         "/images/portfolio1.png",
         "/images/portfolio2.png",
@@ -132,6 +132,24 @@ const Projects = () => {
         "/images/portfolio5.png",
       ],
     },
+   {
+  title: "Elderly Medicine Reminder App",
+  short: "Flutter-based medicine reminder app with AI interaction checking.",
+  description:
+    "A user-friendly cross-platform mobile application developed using Flutter and Dart to help elderly users manage their medication schedules efficiently. The app allows users to add, edit, and delete medicines with dosage time and frequency, sends timely reminders via notifications, and uses AI-based interaction checking to warn users about potential drug interactions and side effects. Supabase is used for secure authentication and real-time database management, ensuring reliable and safe medication tracking.",
+  frontend: "Flutter, Dart",
+  backend: "Supabase (Auth & Database), AI/NLP APIs",
+  features:
+    "Medicine Scheduling, Timely Notifications, Add/Edit/Delete Medicines, AI Interaction Check, Secure Authentication, Cross-Platform Support",
+  visitLink: "https://github.com/tanurandave/ELDERLY_MED_REMINDER",
+  images: [
+    "/images/med1.png",
+    "/images/med2.png",
+    "/images/med3.png",
+    "/images/med4.png",
+  ],
+}
+,
   ];
 
   const openModal = (project) => {
@@ -158,7 +176,7 @@ const Projects = () => {
 
   return (
     <div className="projects-section" id="projects">
-      <h2> Explore My Tech Creations</h2>
+     <br/><br/> <h2> Explore My Tech Creations</h2>
       <div className="project-container">
         {projectData.map((project, index) => (
           <div className="project-card" key={index}>

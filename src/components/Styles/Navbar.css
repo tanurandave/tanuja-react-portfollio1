@@ -1,67 +1,140 @@
+/* =========================
+   NAVBAR BASE (TRANSPARENT)
+   ========================= */
 .navbar {
-  background-color: #111;
+  background: transparent; /* shows section behind */
   color: white;
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
   height: 60px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  position: relative;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1000;
+
+  box-shadow: none;
+
+  transition:
+    background 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.45s ease,
+    box-shadow 0.45s ease,
+    border 0.45s ease;
 }
 
-/* ✅ keep logo left */
+/* =========================
+   NAVBAR HOVER (GLASS BLACK)
+   ========================= */
+.navbar:hover {
+  background: rgba(0, 0, 0, 0.6); /* glossy black glass */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   LOGO
+   ========================= */
 .logo {
   font-family: 'Georgia', serif;
   font-weight: bold;
   color: #b76efb;
   font-size: 1.8rem;
   letter-spacing: 1px;
-  margin-right: auto; /* push everything else away */
+  margin-right: auto;
+
+  transition: transform 0.3s ease;
 }
 
-/* ✅ center nav-links */
+.navbar:hover .logo {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   NAV LINKS (CENTERED)
+   ========================= */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0 auto; /* centers the list */
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
+
 .nav-links li {
   display: inline;
 }
 
 .nav-links a {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  position: relative;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #b76efb;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #b76efb;
+  transform: translateY(-2px);
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   GITHUB BUTTON
+   ========================= */
 .github-button {
   padding: 8px 20px;
   border: 2px solid #a259ff;
   border-radius: 25px;
   color: #a259ff;
   margin-left: 150px;
-  background-color: transparent;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .github-button:hover {
-  background-color: #a259ff;
+  background: rgba(162, 89, 255, 0.2);
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(162, 89, 255, 0.5);
 }
 
-/* ✅ Hamburger */
+/* =========================
+   HAMBURGER
+   ========================= */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -69,7 +142,10 @@
   color: white;
   z-index: 1100;
 }
-/* ✅ Mobile view */
+
+/* =========================
+   MOBILE VIEW
+   ========================= */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -78,19 +154,27 @@
     right: 0;
     width: 220px;
 
-    /* Transparent glass effect */
-    background: rgba(17, 17, 17, 0.6); /* transparent black */
-    backdrop-filter: blur(10px);       /* blur effect */
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    /* hidden by default */
     max-height: 0;
-    overflow: hidden;
     opacity: 0;
-    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.4s ease;
+
     border-left: 2px solid #b76efb;
     border-bottom: 2px solid #b76efb;
     border-radius: 8px;
+  }
+
+  .nav-links.show {
+    max-height: 400px;
+    opacity: 1;
+    padding: 1rem;
   }
 
   .nav-links li {
@@ -98,17 +182,10 @@
     text-align: center;
   }
 
-  .nav-links.show {
-    max-height: 400px; /* enough to fit all items */
-    opacity: 1;
-    padding: 1rem;
-  }
-
   .hamburger {
     display: block;
   }
 
-  /* ✅ GitHub button appears after menu items */
   .github-button {
     display: none;
   }
