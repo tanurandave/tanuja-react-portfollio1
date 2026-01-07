@@ -251,13 +251,13 @@ useEffect(() => {
                 <h3><span className="highlight-yellow">SVERI College Engineering, Pandharpur</span></h3>
                 <p>Bachelor of Technology – BTech, Computer Science and Engineering</p>
                 <p><strong>Nov 2023 – Aug 2026</strong></p>
-                <p><strong>CGPA:</strong> 8.98</p>
+                <p><strong>CGPA:</strong> 10</p>
                <p className="edu-summary">
  I am currently pursuing a Bachelor's degree in Computer Science and Engineering at SVERI College of Engineering,
 </p>
 <p className="edu-more">
   Pandharpur. 
-  I have completed 2nd year and have a CGPA of 8.98. I have taken courses in Data Structures, Object-Oriented Programming, 
+  I have completed 3nd year and have a CGPA of 10. I have taken courses in Data Structures, Object-Oriented Programming, 
   and Computer Networks, among others.
 </p>
  </div>
